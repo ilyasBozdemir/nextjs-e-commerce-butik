@@ -23,7 +23,7 @@ import {
 
 import { VscSignOut } from "react-icons/vsc";
 
-import "./index.css";
+
 
 function SettingSidebarButton({ isOpen, onOpen, onClose }) {
   const { setColorMode, colorMode, toggleColorMode } = UseColorMode();

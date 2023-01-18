@@ -10,7 +10,6 @@ import {
   useDisclosure as UseDisclosure,
 } from "@chakra-ui/react";
 
-import { Outlet } from "react-router-dom";
 
 const Footer = React.lazy(() => import("../components/Footer"));
 const ScrollToTop = React.lazy(() => import("../components/ScrollToTop"));
@@ -18,7 +17,7 @@ const CookieContainer = React.lazy(() =>
   import("../components/CookieContainer")
 );
 
-function index(props) {
+function Layout(props) {
   const { isOpen, onOpen, onClose } = UseDisclosure();
 
   return (
@@ -48,7 +47,6 @@ function index(props) {
         <Box>
           <ScrollToTop />
           <CookieContainer />
-          <Outlet />
           {props.children}
           <Footer />
         </Box>
@@ -58,4 +56,4 @@ function index(props) {
   );
 }
 
-export default index;
+export default Layout;
