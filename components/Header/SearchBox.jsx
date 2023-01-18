@@ -1,8 +1,9 @@
 import React from "react";
 
-import { Link, useNavigate } from "react-router-dom";
+
+import Link from "next/link";
+
 import { encode, decode } from "html-entities";
-import { useSearchParams } from "react-router-dom";
 import {
   Stack,
   Box,
@@ -16,7 +17,7 @@ import {
   Badge,
 } from "@chakra-ui/react";
 import styles from "./index.module.css";
-
+import { useRouter } from 'next/router';
 import { AiOutlineClose } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
 import { Highlight } from "@chakra-ui/react";
@@ -219,7 +220,7 @@ function SearchBox(props) {
   const [result, setResult] = React.useState(false);
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const navigate = useNavigate();
+
   const [closeButtonShow, setCloseButtonShow] = React.useState(false);
 
   const [inputValue, setInputValue] = React.useState(
@@ -307,6 +308,7 @@ function SearchBox(props) {
               />
               {closeButtonShow === true ? (
                 <InputRightElement
+                  // eslint-disable-next-line react/no-children-prop
                   children={
                     <Icon
                       onClick={() => setInputValue("")}
@@ -346,8 +348,8 @@ function SearchBox(props) {
                   kategori bulamadık!
                 </Box>
               ) : (
-                result.map((item) => (
-                  <Link to={item.to}>
+                result.map((item,i) => (
+                  <Link to={item.to} key={i}>
                     <Box
                       key={item.id}
                       className={styles.search_result_item}

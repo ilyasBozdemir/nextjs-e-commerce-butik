@@ -22,7 +22,7 @@ import {
 } from "@chakra-ui/react";
 
 import { useSearchParams, useLocation } from "react-router-dom";
-import { MainContext, useContext } from "../../../contexts/MainContext";
+import { MainContext, useContext } from "../../../contexts/MainContext.jsx";
 
 function PriceRange() {
   const { tags, setTags, products } = useContext(MainContext);

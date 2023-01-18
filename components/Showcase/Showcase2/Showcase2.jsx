@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import style from "./style.module.css";
 
-import { MainContext, useContext } from "../../../contexts/MainContext";
+import { MainContext, useContext } from "../../../contexts/MainContext.jsx";
 
 const Cart = (props) => {
   const { name, to, src } = props;

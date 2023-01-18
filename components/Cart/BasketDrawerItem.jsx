@@ -12,7 +12,7 @@ import { Button } from "@chakra-ui/react";
 
 import { MdDelete } from "react-icons/md";
 
-import { MainContext, useContext } from "../../contexts/MainContext";
+import { MainContext, useContext } from "../../contexts/MainContext.jsx";
 
 import {
   Table,

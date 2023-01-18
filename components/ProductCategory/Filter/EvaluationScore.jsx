@@ -8,7 +8,7 @@ import { AiFillStar } from "react-icons/ai";
 import { Radio, RadioGroup } from "@chakra-ui/react";
 import { useSearchParams, useLocation } from "react-router-dom";
 
-import { MainContext, useContext } from "../../../contexts/MainContext";
+import { MainContext, useContext } from "../../../contexts/MainContext.jsx";
 
 import { useRadio, useRadioGroup } from "@chakra-ui/react";
 

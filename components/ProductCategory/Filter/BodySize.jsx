@@ -5,7 +5,7 @@ import { Tooltip } from "@chakra-ui/react";
 import { useCheckbox, useCheckboxGroup } from "@chakra-ui/react";
 
 import { AiOutlineCheck } from "react-icons/ai";
-import { MainContext, useContext } from "../../../contexts/MainContext";
+import { MainContext, useContext } from "../../../contexts/MainContext.jsx";
 import { useSearchParams, useLocation } from "react-router-dom";
 
 const CategoryName = ({ name }) => {

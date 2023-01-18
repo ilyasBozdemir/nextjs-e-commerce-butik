@@ -2,7 +2,7 @@ import { Box, Flex } from "@chakra-ui/react";
 import React, { useState } from "react";
 import EmptyBasket from "./EmptyBasket";
 import Basket from "./Basket";
-import { MainContext, useContext } from "../../contexts/MainContext";
+import { MainContext, useContext } from "../../contexts/MainContext.jsx";
 
 function CardWrapper() {
   const { basket } = useContext(MainContext);

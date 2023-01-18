@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import {
   Icon,
   Text,
@@ -58,7 +58,7 @@ export default function NavLink({ link, ...rest }) {
 
       <Collapse in={isOpen} animateOpacity>
         {childrens.map((link, i) => (
-          <Link to={link.href}>
+          <Link to={link.href} key={i}>
             <Box
               onMouseEnter={onOpen}
               onMouseLeave={onClose}

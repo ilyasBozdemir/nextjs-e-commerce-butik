@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../Navbar";
 import { Flex } from "@chakra-ui/react";
 
-import { linkItems } from "../../../src/constants/LinkItems";
+import { linkItems } from "../../constants/LinkItems";
 
 function HeaderMenu() {
   return (

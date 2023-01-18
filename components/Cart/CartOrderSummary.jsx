@@ -19,7 +19,7 @@ import {
   InputRightElement,
   IconButton,
 } from "@chakra-ui/react";
-import { MainContext, useContext } from "../../contexts/MainContext";
+import { MainContext, useContext } from "../../contexts/MainContext.jsx";
 import * as React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { formatPrice } from "./PriceTag";

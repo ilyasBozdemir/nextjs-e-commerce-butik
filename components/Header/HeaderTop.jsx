@@ -6,7 +6,7 @@ import {
   useDisclosure as UseDisclosure,
 } from "@chakra-ui/react";
 
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 import SettingSidebar from "../SettingSidebar";
 import SettingSidebarButton from "../SettingSidebar/SettingSidebarButton";

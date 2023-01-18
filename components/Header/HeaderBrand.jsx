@@ -18,7 +18,8 @@ import SearchBox from "./SearchBox";
 
 import Link from "next/link";
 
-import { MainContext, useContext } from "../../../src/contexts/MainContext";
+import { MainContext, useContext } from "../../contexts/MainContext";
+
 import UserMenu from "./UserMenu";
 import BasketView from "./BasketView";
 import { Tooltip } from "@chakra-ui/react";

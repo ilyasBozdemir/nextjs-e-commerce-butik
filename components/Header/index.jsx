@@ -10,7 +10,8 @@ import {
   useDisclosure as UseDisclosure,
 } from "@chakra-ui/react";
 
-import { Link } from "react-router-dom";
+
+import Link from "next/link";
 import Logo from "../Logo";
 
 import HeaderTop from "./HeaderTop";
@@ -23,7 +24,7 @@ import SettingSidebarButton from "../../components/SettingSidebar/SettingSidebar
 
 import BottomNavigation from "../../components/BottomNavigation";
 
-function index({ onOpen, ...rest }) {
+function Header({ onOpen, ...rest }) {
   const {
     isOpen: isOpenSettingSidebar,
     onOpen: onOpenSettingSidebar,
@@ -141,4 +142,4 @@ function index({ onOpen, ...rest }) {
   );
 }
 
-export default React.memo(index);
+export default React.memo(Header);

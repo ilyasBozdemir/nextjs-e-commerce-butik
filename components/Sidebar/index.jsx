@@ -14,9 +14,9 @@ import NavLink from "./NavLink";
 
 import { linkItems } from "../../constants/LinkItems";
 
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
-function index({ onClose, ...rest }) {
+function Sidebar({ onClose, ...rest }) {
   const [isDesktop] = UseMediaQuery("(min-width: 768px)");
 
   return (
@@ -58,4 +58,4 @@ function index({ onClose, ...rest }) {
   );
 }
 
-export default index;
+export default Sidebar;

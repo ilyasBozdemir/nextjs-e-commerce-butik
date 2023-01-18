@@ -10,7 +10,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import { AiOutlineUser } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 function UserMenu(props) {
   const { isOpen, onOpen, onClose, ...rest } = props;

@@ -10,7 +10,7 @@ import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
 
 import { BiLoader, BiShoppingBag } from "react-icons/bi";
 
-import { MainContext, useContext } from "../../contexts/MainContext";
+import { MainContext, useContext } from "../../contexts/MainContext.jsx";
 import { useToast } from "@chakra-ui/react";
 
 function AddToCardButton({ product, body, quantity }) {

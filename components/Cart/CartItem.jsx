@@ -2,7 +2,7 @@ import { CloseButton, Flex, Link, Select } from "@chakra-ui/react";
 import * as React from "react";
 import { PriceTag } from "./PriceTag";
 import { CartProductMeta } from "./CartProductMeta";
-import { MainContext, useContext } from "../../contexts/MainContext";
+import { MainContext, useContext } from "../../contexts/MainContext.jsx";
 
 export const CartItem = (props) => {
   const {

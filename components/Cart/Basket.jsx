@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { CartItem } from "./CartItem";
 import { CartOrderSummary } from "./CartOrderSummary";
-import { MainContext, useContext } from "../../contexts/MainContext";
+import { MainContext, useContext } from "../../contexts/MainContext.jsx";
 import { Link } from "react-router-dom";
 
 import {

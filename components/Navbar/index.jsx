@@ -9,13 +9,11 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-import { Link, useNavigate as UseNavigate } from "react-router-dom";
-
-function index({ link }) {
+import Link from "next/link";
+function Navbar({ link }) {
   const { isOpen, onOpen, onClose } = UseDisclosure();
   const { label, href, icon, childrens } = link;
 
-  const navigate = UseNavigate();
 
   return (
     <>
@@ -41,7 +39,7 @@ function index({ link }) {
         {childrens.length !== 0 ? (
           <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
             {childrens.map((link, i) => (
-              <Link to={link.href}>
+              <Link to={link.href} key={i}>
                 <MenuItem
                   key={i}
                   link={link}
@@ -66,4 +64,4 @@ function index({ link }) {
   );
 }
 
-export default index;
+export default Navbar;

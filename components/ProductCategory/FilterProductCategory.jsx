@@ -31,7 +31,7 @@ import { useNavigate, useLocation, useSearchParams } from "react-router-dom";
 
 import { useWindowDimensions } from "../../../src/hooks/";
 
-import { MainContext, useContext } from "../../contexts/MainContext";
+import { MainContext, useContext } from "../../contexts/MainContext.jsx";
 
 const smVariant = { navigation: "drawer", navigationButton: true };
 const mdVariant = { navigation: "sidebar", navigationButton: false };
