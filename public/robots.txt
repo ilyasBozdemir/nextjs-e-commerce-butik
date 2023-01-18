@@ -1,4 +1,5 @@
 User-agent: *
 User-agent: Googlebot
 
-Disallow: /admin
+# burda search parametlerini, sepet sayfasını indexlemesini engellemek lazım
+#
