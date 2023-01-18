@@ -1,61 +1,9 @@
-import React from "react";
+import React from 'react'
 
-import {
-  Box,
-  CloseButton,
-  Flex,
-  Text,
-  useMediaQuery as UseMediaQuery,
-} from "@chakra-ui/react";
-
-import Logo from "../Logo";
-
-import NavLink from "./NavLink";
-
-import { linkItems } from "../../constants/LinkItems";
-
-import Link from "next/link";
-
-function Sidebar({ onClose, ...rest }) {
-  const [isDesktop] = UseMediaQuery("(min-width: 768px)");
-
+function Sidebar() {
   return (
-    <>
-      <Box
-        transition={{ base: "3s ease" }}
-        bg="white"
-        borderRight="1px"
-        borderRightColor="gray.200"
-        w="full"
-        pos="fixed"
-        h="full"
-        style={{ overflowY: "auto" }}
-        sx={{
-          "::-webkit-scrollbar": {
-            display: "none",
-          },
-        }}
-        {...rest}
-      >
-        <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-          <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
-            <Link to="/">
-              <Logo />
-            </Link>
-          </Text>
-          <CloseButton
-            display={{ base: "flex", md: "flex" }}
-            onClick={onClose}
-          />
-        </Flex>
-        {linkItems.map((link, i) => (
-          <NavLink key={i} link={link} />
-        ))}
-      </Box>
-
-      {isDesktop ? onClose() : ""}
-    </>
-  );
+    <div>index</div>
+  )
 }
 
-export default Sidebar;
+export default Sidebar
