@@ -1,15 +1,23 @@
 // pages/_app.js
 import { MainContext } from "@/contexts/MainContext";
 import { ChakraProvider } from "@chakra-ui/react";
-import Layout from "../layout/index";
+import AdminLayout from "../layout/AdminLayout";
+import UserLayout from "../layout/UserLayout";
 import theme from "../src/theme";
 import React from "react";
+
+import { useRouter } from 'next/router';
 function MyApp({ Component, pageProps }) {
-
-
-  const data = {
-
-  };
+  const data = {};
+  let Layout;
+  const router = useRouter();
+  if (router.pathname === '/') {
+    Layout = UserLayout;
+  } else if (router.pathname === '/admin') {
+    Layout = AdminLayout;
+  } else {
+    Layout = UserLayout;
+  }
   return (
     <ChakraProvider theme={theme}>
       <MainContext.Provider value={data}>
