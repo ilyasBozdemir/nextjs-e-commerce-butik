@@ -1,37 +1,61 @@
+import React from "react";
+
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
-import { Box, Drawer, DrawerContent, useDisclosure ,DrawerCloseButton} from "@chakra-ui/react";
-import React from "react";
-export default function Layout({ children }) {
 
+import {
+  Box,
+  Drawer,
+  DrawerContent,
+  useDisclosure as UseDisclosure,
+} from "@chakra-ui/react";
 
-  
-  const { isOpen, onOpen, onClose } = useDisclosure();
+import { Outlet } from "react-router-dom";
+
+const Footer = React.lazy(() => import("../components/Footer"));
+const ScrollToTop = React.lazy(() => import("../components/ScrollToTop"));
+const CookieContainer = React.lazy(() =>
+  import("../components/CookieContainer")
+);
+
+function index(props) {
+  const { isOpen, onOpen, onClose } = UseDisclosure();
+
   return (
-    <Box minH="100vh">
-   
-      <Drawer
-        autoFocus={false}
-        isOpen={isOpen}
-        placement="left"
-        onClose={onClose}
-        returnFocusOnClose={false}
-        onOverlayClick={onClose}
-        size="sm"
-      >
-        <DrawerContent>
-        <DrawerCloseButton />
-          <Sidebar onClose={onClose} />
-        </DrawerContent>
-      </Drawer>
-      {/*= Header =*/}
+    <>
+      <Box minH="100vh" zIndex="100">
+        <Sidebar
+          onClose={() => onClose}
+          display={{ base: "none", md: "none" }}
+        />
+        <Drawer
+          autoFocus={true}
+          isOpen={isOpen}
+          placement="left"
+          onClose={onClose}
+          returnFocusOnClose={false}
+          onOverlayClick={onClose}
+          size="xs"
+        >
+          <DrawerContent>
+            <Sidebar onClose={onClose} />
+          </DrawerContent>
+        </Drawer>
 
-      <Header onOpen={onOpen} />
+        {/*= Header =*/}
+        <Header onOpen={onOpen} />
 
-      <Box ml={{ base: 0, md: 0 }} >
-        {children}
+        <Box>
+          <ScrollToTop />
+          <CookieContainer />
+          <Outlet />
+          {props.children}
+          <Footer />
+        </Box>
       </Box>
-      
-    </Box>
+      )
+    </>
   );
 }
+
+export default index;

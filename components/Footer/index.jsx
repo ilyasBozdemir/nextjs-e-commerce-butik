@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../../components/Logo";
-import { Link as ReactLink } from "react-router-dom";
+import Link from "next/link";
 import {
   Button,
   ButtonGroup,
@@ -10,7 +10,6 @@ import {
   Input,
   Stack,
   Text,
-  Link,
   Box,
 } from "@chakra-ui/react";
 
@@ -44,9 +43,9 @@ function index() {
         }}
       >
         <Stack align="center" justifyContent={"center"} ml={10} mr={10}>
-          <ReactLink to="/">
+          <Link  to="/">
             <Logo />
-          </ReactLink>
+          </Link>
 
           <Text color="muted.200">En Trend Kadın Giyim</Text>
 

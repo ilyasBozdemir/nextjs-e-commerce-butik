@@ -8,8 +8,7 @@ import {
   Tooltip,
   useDisclosure as UseDisclosure,
 } from "@chakra-ui/react";
-
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
 import UserMenu from "../Header/UserMenu";
