@@ -6,14 +6,14 @@ import UserLayout from "../layout/UserLayout";
 import theme from "../src/theme";
 import React from "react";
 
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 function MyApp({ Component, pageProps }) {
   const data = {};
   let Layout;
   const router = useRouter();
-  if (router.pathname === '/') {
+  if (router.pathname === "/") {
     Layout = UserLayout;
-  } else if (router.pathname === '/admin') {
+  } else if (router.pathname.startsWith("/admin")) {
     Layout = AdminLayout;
   } else {
     Layout = UserLayout;
