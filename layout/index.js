@@ -1,5 +1,5 @@
-import Header from "../components/shared/Header";
-import Sidebar from "../components/shared/Sidebar";
+import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
 import { Box, Drawer, DrawerContent, useDisclosure ,DrawerCloseButton} from "@chakra-ui/react";
 import React from "react";
 export default function Layout({ children }) {

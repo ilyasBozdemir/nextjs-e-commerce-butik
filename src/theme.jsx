@@ -14,7 +14,7 @@ const theme = extendTheme({
   config: {
     initialColorMode: "system",
     useSystemColorMode: true,
-    cssVarPrefix: "guven-otel",
+    cssVarPrefix: "eflatun-butik",
   },
   colors: {
     transparent: "transparent",

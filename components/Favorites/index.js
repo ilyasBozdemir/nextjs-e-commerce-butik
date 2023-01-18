@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Sidebar() {
+function Favorites() {
   return (
     <div>index</div>
   )
 }
 
-export default Sidebar
+export default Favorites
