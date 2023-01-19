@@ -2,8 +2,8 @@ import React from 'react'
 
 function Sidebar() {
   return (
-    <div>index</div>
+    <div>Sidebar</div>
   )
 }
 
-export default Sidebar
+export default Sidebar    

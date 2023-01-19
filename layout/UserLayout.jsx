@@ -2,9 +2,9 @@ import React from "react";
 
 const Footer = React.lazy(() => import("../components/Footer"));
 const ScrollToTop = React.lazy(() => import("../components/ScrollToTop"));
+const Header = React.lazy(() => import("../components/Header"));
+const Sidebar = React.lazy(() => import("../components/Sidebar"));
 
-import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
 import { Box, Drawer, DrawerContent, useDisclosure } from "@chakra-ui/react";
 
 function UserLayout({ children }) {
@@ -12,10 +12,6 @@ function UserLayout({ children }) {
   return (
     <>
       <Box minH="100vh" zIndex="100">
-        <Sidebar
-          onClose={() => onClose}
-          display={{ base: "none", md: "none" }}
-        />
         <Drawer
           autoFocus={true}
           isOpen={isOpen}
@@ -36,6 +32,7 @@ function UserLayout({ children }) {
         <Box>
           <ScrollToTop />
           {/* <CookieContainer />*/}
+
           {children}
           <Footer />
         </Box>

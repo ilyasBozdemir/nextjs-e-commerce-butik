@@ -2,20 +2,24 @@ import Head from "next/head";
 
 import React from "react";
 import { useRouter } from "next/router";
+import { Box, Flex, HStack } from "@chakra-ui/react";
+import Showcase from "@/components/Showcase";
+import IGStory from "@/components/IGStory";
+import Highlights from "@/components/Highlights";
 
-export default function Home() {
+export default function HomePage() {
   const router = useRouter();
   const [currentUrl, setCurrentUrl] = React.useState(router.asPath);
-
   const [site, setSite] = React.useState({
     author: "ilyas Bozdemir,bozdemir.ib70@gmail.com",
     title: "Eflatun Butik",
     url: currentUrl,
     image: "",
-    imageAlt: "",
-    description: "",
+    imageAlt: "site-logo-png",
+    description: "Elbise ,Tesettür Giyim  daha aradığın ve daha fazla indirimli ürün en uygun fiyatlar ve kampanyalarla Eflatun Butik'te.",
     name: "",
   });
+  
   return (
     <>
       <Head>
@@ -48,7 +52,28 @@ export default function Home() {
         <meta itemprop="name" content={site.name} />
         <meta itemprop="description" content={site.description} />
       </Head>
-      <main></main>
+      <main>
+      <>
+      <Box mt={4}>
+        <IGStory />
+      </Box>
+      {/*
+      <Box mt={4}>
+        <MySlider />
+      </Box> */}
+      <Flex
+        direction={"row"}
+        justifyContent={{ base: "space-between", md: "space-around" }}
+        mt={4}
+      >
+        <Highlights />
+      </Flex>
+
+      <HStack mt={4}>
+        <Showcase />
+      </HStack>
+    </>
+      </main>
     </>
   );
 }

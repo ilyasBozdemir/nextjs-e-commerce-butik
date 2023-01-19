@@ -7,6 +7,7 @@ import theme from "../src/theme";
 import React from "react";
 
 import { useRouter } from "next/router";
+import ScrollToTop from "@/components/ScrollToTop";
 function MyApp({ Component, pageProps }) {
   const data = {};
   let Layout;
