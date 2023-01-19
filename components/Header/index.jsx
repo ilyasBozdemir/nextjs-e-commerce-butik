@@ -17,7 +17,7 @@ import HeaderTop from "./HeaderTop";
 import HeaderBrand from "./HeaderBrand";
 import HeaderMenu from "./HeaderMenu";
 import SearchBox from "./SearchBox";
-
+import { FiMenu } from "react-icons/fi";
 import Link from "next/link";
 import React from "react";
 import Logo from "../Logo";
@@ -92,7 +92,8 @@ function Header({ onOpen, ...rest }) {
               fontWeight="bold"
             >
               <Link to="/">
-                <Logo />
+                <a> <Logo /></a>
+               
               </Link>
             </Text>
             <Spacer />

@@ -9,36 +9,36 @@ import {
   useDisclosure as UseDisclosure,
 } from "@chakra-ui/react";
 
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-import UserMenu from "../Header/UserMenu";
+import UserMenu from "./Header/UserMenu";
 
-const navs = [
-  {
-    to: "/",
-    icon: AiOutlineHome,
-    label: "anasayfa",
-  },
-  {
-    to: "/sepetim",
-    icon: AiOutlineShoppingCart,
-    label: "sepetim",
-  },
-  {
-    to: "/favorilerim",
-    icon: MdOutlineFavoriteBorder,
-    label: "favorilerim",
-  },
-  {
-    label: "hesabım",
-  },
-];
+
 
 function BottomNavigation() {
   const [isLogin, setIsLogin] = UseState(false);
   const { isOpen, onOpen, onClose } = UseDisclosure();
-
+  const navs = [
+    {
+      to: "/",
+      icon: AiOutlineHome,
+      label: "anasayfa",
+    },
+    {
+      to: "/sepetim",
+      icon: AiOutlineShoppingCart,
+      label: "sepetim",
+    },
+    {
+      to: "/favorilerim",
+      icon: MdOutlineFavoriteBorder,
+      label: "favorilerim",
+    },
+    {
+      label: "hesabım",
+    },
+  ];
   return (
     <>
       <Flex justifyContent={"center"} direction={"row"}>
