@@ -26,9 +26,7 @@ function Page404(props) {
             textAlign={{ base: "center", lg: "flex-start" }}
             justifyContent={{ base: "center", lg: "flex-start" }}
           >
-            <Link to="/">
-              <Logo />
-            </Link>
+            <Logo />
           </Flex>
         </Box>
         <Flex
@@ -45,8 +43,6 @@ function Page404(props) {
             <>
               <>
                 <Button
-                  as={Link}
-                  to={to || "/"}
                   mt={3}
                   w={250}
                   fontSize={18}

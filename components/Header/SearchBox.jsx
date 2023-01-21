@@ -16,7 +16,6 @@ import {
   Text,
   Badge,
 } from "@chakra-ui/react";
-import styles from "./index.module.css";
 
 import { AiOutlineClose } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
@@ -33,12 +32,9 @@ function SearchBox(props) {
 
   const [result, setResult] = React.useState(false);
 
-
   const [closeButtonShow, setCloseButtonShow] = React.useState(false);
 
-  const [inputValue, setInputValue] = React.useState(
-
-  );
+  const [inputValue, setInputValue] = React.useState("");
   const isTyping = inputValue.replace(/\s+/, "").length > 0;
 
   const searchRef = React.useRef();
