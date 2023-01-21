@@ -16,10 +16,11 @@ export default function HomePage() {
     url: currentUrl,
     image: "",
     imageAlt: "site-logo-png",
-    description: "Elbise ,Tesettür Giyim  daha aradığın ve daha fazla indirimli ürün en uygun fiyatlar ve kampanyalarla Eflatun Butik'te.",
+    description:
+      "Elbise ,Tesettür Giyim  daha aradığın ve daha fazla indirimli ürün en uygun fiyatlar ve kampanyalarla Eflatun Butik'te.",
     name: "",
   });
-  
+
   return (
     <>
       <Head>
@@ -53,26 +54,31 @@ export default function HomePage() {
         <meta itemprop="description" content={site.description} />
       </Head>
       <main>
-      <>
-      <Box mt={4}>
-        <IGStory />
-      </Box>
-      {/*
+        <Box w={"full"}>
+          {/*  <Box mt={4}>
+          
+            
+           
+            <IGStory />
+          </Box> 
+           */}
+          {/*
       <Box mt={4}>
         <MySlider />
-      </Box> */}
-      <Flex
-        direction={"row"}
-        justifyContent={{ base: "space-between", md: "space-around" }}
-        mt={4}
-      >
-        <Highlights />
-      </Flex>
+      </Box> 
+          <Flex
+            direction={"row"}
+            justifyContent={{ base: "space-between", md: "space-around" }}
+            mt={4}
+          >
+            <Highlights />
+          </Flex>
 
-      <HStack mt={4}>
-        <Showcase />
-      </HStack>
-    </>
+          <HStack mt={4}>
+            <Showcase />
+          </HStack>
+          */}
+        </Box>
       </main>
     </>
   );
