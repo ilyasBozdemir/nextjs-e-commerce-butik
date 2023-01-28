@@ -3,6 +3,7 @@ import React from "react";
 import Logo from "../../components/Logo";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useToast } from "@chakra-ui/react";
 
 import {
   Button,
@@ -23,6 +24,31 @@ import Image from "next/image";
 
 function Footer() {
   const router = useRouter();
+
+  const [email, setEmail] = React.useState("");
+
+  function handleInputChange(e) {
+    setEmail(e.target.value);
+  }
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+
+
+
+    toast({
+      title: "Abone olundu.",
+      status: "success",
+      duration: 9000,
+      isClosable: true,
+      position: 'top-right',
+    });
+
+    setEmail('');
+  }
+
+  React.useEffect(() => {}, []);
+  const toast = useToast();
   return (
     <>
       <Container
@@ -98,6 +124,9 @@ function Footer() {
                     Hesabım
                   </Button>
                   <Button variant="link" color="white" fontSize={[10, 13]}>
+                    Sepetim
+                  </Button>
+                  <Button variant="link" color="white" fontSize={[10, 13]}>
                     Favorilerim
                   </Button>
                 </Stack>
@@ -133,26 +162,30 @@ function Footer() {
               <Text as="div">
                 Kampanya ve Fırsatlarımızdan İlk Siz Haberdar Olun!
               </Text>
+              <form onSubmit={handleFormSubmit}>
+                <Stack
+                  spacing="4"
+                  direction={{
+                    base: "column",
+                    sm: "row",
+                  }}
+                  maxW={{
+                    lg: "360px",
+                  }}
+                >
+                  <Input
+                    placeholder="E-mail adresini giriniz"
+                    type="email"
+                    value={email}
+                    onChange={handleInputChange}
+                    required
+                  />
 
-              <Stack
-                spacing="4"
-                direction={{
-                  base: "column",
-                  sm: "row",
-                }}
-                maxW={{
-                  lg: "360px",
-                }}
-              >
-                <Input
-                  placeholder="E-mail adresini giriniz"
-                  type="email"
-                  required
-                />
-                <Button color="blue.400" type="submit" flexShrink={0}>
-                  Abone ol
-                </Button>
-              </Stack>
+                  <Button color="blue.400" type="submit" flexShrink={0}>
+                    Abone ol
+                  </Button>
+                </Stack>
+              </form>
             </Stack>
           </Stack>
         </Stack>

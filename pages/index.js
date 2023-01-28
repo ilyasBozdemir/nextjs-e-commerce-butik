@@ -79,11 +79,11 @@ export default function HomePage() {
           </HStack>
           */}
 
-          <Box as={'p'} h={200}>IGStory</Box>
-          <Box as={'p'} h={200}>Highlights</Box>
-          <Box as={'p'} h={200}>Öne Çıkanlar</Box>
-          <Box as={'p'} h={200}>Çok Satan Ürünler</Box>
-          <Box as={'p'} h={200}>Showcases</Box>
+          <Box as={'p'} h={50}>IGStory</Box>
+          <Box as={'p'} h={50}>Highlights</Box>
+          <Box as={'p'} h={50}>Öne Çıkanlar</Box>
+          <Box as={'p'} h={50}>Çok Satan Ürünler</Box>
+          <Box as={'p'} h={50}>Showcases</Box>
 
         </Box>
       </main>
