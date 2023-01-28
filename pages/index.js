@@ -14,7 +14,7 @@ export default function HomePage() {
     author: "ilyas Bozdemir,bozdemir.ib70@gmail.com",
     title: "Eflatun Butik",
     url: currentUrl,
-    image: "",
+    image: "/favicon.ico",
     imageAlt: "site-logo-png",
     description:
       "Elbise ,Tesettür Giyim  daha aradığın ve daha fazla indirimli ürün en uygun fiyatlar ve kampanyalarla Eflatun Butik'te.",
@@ -54,7 +54,7 @@ export default function HomePage() {
         <meta itemprop="description" content={site.description} />
       </Head>
       <main>
-        <Box w={"full"}>
+        <Box w={"full"} p={2}>
           {/*  <Box mt={4}>
           
             
@@ -78,6 +78,13 @@ export default function HomePage() {
             <Showcase />
           </HStack>
           */}
+
+          <Box as={'p'} h={200}>IGStory</Box>
+          <Box as={'p'} h={200}>Highlights</Box>
+          <Box as={'p'} h={200}>Öne Çıkanlar</Box>
+          <Box as={'p'} h={200}>Çok Satan Ürünler</Box>
+          <Box as={'p'} h={200}>Showcases</Box>
+
         </Box>
       </main>
     </>

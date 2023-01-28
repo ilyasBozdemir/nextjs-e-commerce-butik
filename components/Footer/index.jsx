@@ -18,7 +18,7 @@ import {
 
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 
-import iyzicoLogo from "../../assests/iyzico_ile_ode_colored.svg";
+import iyzicoLogo from "../../assests/iyzico_ile_ode_white.png";
 import Image from "next/image";
 
 function Footer() {
@@ -30,9 +30,9 @@ function Footer() {
         zIndex={150}
         as="footer"
         maxW={"container.lg"}
-        bg={"black.300"}
-        _light={{ color: "black" }}
-        _dark={{ color: "white" }}
+        color={"white"}
+        _light={{ bg: "blackAlpha.900" }}
+        _dark={{ bg: "blackAlpha.900" }}
         marginTop={10}
       >
         <Divider marginBottom={3} />
@@ -67,7 +67,7 @@ function Footer() {
                 _hover={{ bg: "pink.500", color: " white" }}
               />
             </ButtonGroup>
-
+            <Text fontSize="13px">Güvenli Alışveriş</Text>
             <Image
               src={iyzicoLogo}
               alt="iyzico ile öde logo"
@@ -90,43 +90,43 @@ function Footer() {
           >
             <Stack direction="row" spacing="2">
               <Stack spacing="2" minW="36" flex="1">
-                <Text fontSize="sm" fontWeight="semibold">
+                <Text fontWeight="semibold" fontSize={18}>
                   Hesabım
                 </Text>
                 <Stack spacing="2" shouldWrapChildren>
-                  <Button variant="link" color="blue.400">
+                  <Button variant="link" color="white" fontSize={[10, 13]}>
                     Hesabım
                   </Button>
-                  <Button variant="link" color="blue.400">
+                  <Button variant="link" color="white" fontSize={[10, 13]}>
                     Favorilerim
                   </Button>
                 </Stack>
               </Stack>
               <Stack spacing="2" minW="36" flex="1">
-                <Text fontSize="sm" fontWeight="semibold">
+                <Text fontSize={18} fontWeight="semibold">
                   Sözleşmeler
                 </Text>
                 <Stack spacing="2" shouldWrapChildren>
-                  <Button variant="link" color="blue.400">
+                  <Button variant="link" color="white" fontSize={[10, 13]}>
                     Mesafeli Satış Sözleşmesi
                   </Button>
-                  <Button variant="link" color="blue.400">
+                  <Button variant="link" color="white" fontSize={[10, 13]}>
                     Üyelik Sözleşmesi
                   </Button>
-                  <Button variant="link" color="blue.400">
+                  <Button variant="link" color="white" fontSize={[10, 13]}>
                     Çerez Politikası
                   </Button>
-                  <Button variant="link" color="blue.400">
+                  <Button variant="link" color="white" fontSize={[10, 13]}>
                     Gizlilik Sözleşmesi
                   </Button>
-                  <Button variant="link" color="blue.400">
+                  <Button variant="link" color="white" fontSize={[10, 13]}>
                     Kullanım Koşulları
                   </Button>
                 </Stack>
               </Stack>
             </Stack>
             <Stack spacing="4">
-              <Text fontSize="sm" fontWeight="semibold">
+              <Text fontSize={18} fontWeight="semibold">
                 Bizden Haberler
               </Text>
 
@@ -171,7 +171,6 @@ function Footer() {
         </Stack>
 
         <Divider orientation="horizontal" />
-        <Divider orientation="horizontal" />
         <Stack
           justify="flex-end"
           direction={{
@@ -179,17 +178,17 @@ function Footer() {
             md: "row",
           }}
           align="center"
+          bg={"blackAlpha.800"}
         >
           <Text textAlign="center" fontSize="sm" color="subtle">
             Bu websitesi İlyas Bozdemir tarafından geliştirilmiştir.
           </Text>
           <ButtonGroup>
-            
             <IconButton
               as="i"
               aria-label="Github"
               icon={<FaGithub fontSize="1.25rem" />}
-              _hover={{ bg: "black", color: "white" }}
+              _hover={{ bg: "white", color: "black" }}
               bg={"transparent"}
             />
 
