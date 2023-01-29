@@ -9,7 +9,7 @@ function CategoryProductPage() {
   return (
     <>
       <Head>
-        <title></title>
+        <title>{productSlug}</title>
       </Head>
       <>
         {slug}-{productSlug}
