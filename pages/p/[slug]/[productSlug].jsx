@@ -12,16 +12,18 @@ function CategoryProductPage() {
         <title>{productSlug}</title>
       </Head>
       <>
-        {slug}-{productSlug}
         test link
         <>
-          <Link
-            href="/p/[slug]/[productSlug]"
-            as={`/p/${"categorySlug"}/${"productSlug"}`}
-            legacyBehavior
-          >
-            <a>{"name"}</a>
-          </Link>
+          {slug}-{productSlug}
+          <>
+            <Link
+              href="/p/[slug]/[productSlug]"
+              as={`/p/${"categorySlug"}/${"productSlug"}`}
+              legacyBehavior
+            >
+              <a>{"name"}</a>
+            </Link>
+          </>
         </>
       </>
     </>
