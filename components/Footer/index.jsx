@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useCallback } from "react";
 import Logo from "../../components/Logo";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -34,17 +34,15 @@ function Footer() {
   function handleFormSubmit(e) {
     e.preventDefault();
 
-
-
     toast({
       title: "Abone olundu.",
       status: "success",
       duration: 9000,
       isClosable: true,
-      position: 'top-right',
+      position: "top-right",
     });
 
-    setEmail('');
+    setEmail("");
   }
 
   React.useEffect(() => {}, []);
@@ -136,21 +134,32 @@ function Footer() {
                   Sözleşmeler
                 </Text>
                 <Stack spacing="2" shouldWrapChildren>
-                  <Button variant="link" color="white" fontSize={[10, 13]}>
-                    Mesafeli Satış Sözleşmesi
-                  </Button>
-                  <Button variant="link" color="white" fontSize={[10, 13]}>
-                    Üyelik Sözleşmesi
-                  </Button>
-                  <Button variant="link" color="white" fontSize={[10, 13]}>
-                    Çerez Politikası
-                  </Button>
-                  <Button variant="link" color="white" fontSize={[10, 13]}>
-                    Gizlilik Sözleşmesi
-                  </Button>
-                  <Button variant="link" color="white" fontSize={[10, 13]}>
-                    Kullanım Koşulları
-                  </Button>
+                  <Link href="/mesafeli-satis-sozlesmesi">
+                    <Button variant="link" color="white" fontSize={[10, 13]}>
+                      Mesafeli Satış Sözleşmesi
+                    </Button>
+                  </Link>
+                  <Link href="/uyelik-sozlesmesi">
+                    <Button variant="link" color="white" fontSize={[10, 13]}>
+                      Üyelik Sözleşmesi
+                    </Button>
+                  </Link>
+
+                  <Link href="/cerez-sozlesmesi">
+                    <Button variant="link" color="white" fontSize={[10, 13]}>
+                      Çerez Politikası
+                    </Button>
+                  </Link>
+                  <Link href="/gizlilik-sozlesmesi">
+                    <Button variant="link" color="white" fontSize={[10, 13]}>
+                      Gizlilik Sözleşmesi
+                    </Button>
+                  </Link>
+                  <Link href="/kullanim-kosullari">
+                    <Button variant="link" color="white" fontSize={[10, 13]}>
+                      Kullanım Koşulları
+                    </Button>
+                  </Link>
                 </Stack>
               </Stack>
             </Stack>
