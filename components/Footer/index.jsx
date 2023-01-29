@@ -118,15 +118,22 @@ function Footer() {
                   Hesabım
                 </Text>
                 <Stack spacing="2" shouldWrapChildren>
-                  <Button variant="link" color="white" fontSize={[10, 13]}>
-                    Hesabım
-                  </Button>
-                  <Button variant="link" color="white" fontSize={[10, 13]}>
-                    Sepetim
-                  </Button>
-                  <Button variant="link" color="white" fontSize={[10, 13]}>
-                    Favorilerim
-                  </Button>
+              
+                  <Link href="/hesabim">
+                    <Button variant="link" color="white" fontSize={[10, 13]}>
+                      Hesabım
+                    </Button>
+                  </Link>
+                  <Link href="/sepetim">
+                    <Button variant="link" color="white" fontSize={[10, 13]}>
+                      Alışveriş Sepetim
+                    </Button>
+                  </Link>
+                  <Link href="/favorilerim">
+                    <Button variant="link" color="white" fontSize={[10, 13]}>
+                      Favorilerim
+                    </Button>
+                  </Link>
                 </Stack>
               </Stack>
               <Stack spacing="2" minW="36" flex="1">
@@ -145,7 +152,7 @@ function Footer() {
                     </Button>
                   </Link>
 
-                  <Link href="/cerez-sozlesmesi">
+                  <Link href="/cerez-politikasi">
                     <Button variant="link" color="white" fontSize={[10, 13]}>
                       Çerez Politikası
                     </Button>
