@@ -10,5 +10,4 @@ function ConfidentialityAgreementPage() {
     </>
   )
 }
-
 export default ConfidentialityAgreementPage

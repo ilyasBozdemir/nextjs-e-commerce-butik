@@ -5,5 +5,4 @@ function MyFavoriteProductsPage() {
     <div>favorilerim</div>
   )
 }
-
 export default MyFavoriteProductsPage
