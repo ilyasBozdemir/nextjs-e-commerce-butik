@@ -1,8 +1,8 @@
 // pages/_app.js
 import { MainContext } from "@/contexts/MainContext";
 import { ChakraProvider } from "@chakra-ui/react";
-import AdminLayout from "../layout/AdminLayout";
-import UserLayout from "../layout/UserLayout";
+import AdminLayout from "../layouts/AdminLayout";
+import UserLayout from "../layouts/UserLayout";
 import theme from "../src/theme";
 import React from "react";
 
