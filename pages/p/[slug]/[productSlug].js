@@ -13,15 +13,14 @@ function CategoryProductPage() {
       </Head>
       <>
         {slug}-{productSlug}
-
-test link
+        test link
         <>
           <Link
             href="/p/[slug]/[productSlug]"
-            as={`/p/${'categorySlug'}/${'productSlug'}`}
+            as={`/p/${"categorySlug"}/${"productSlug"}`}
             legacyBehavior
           >
-            <a>{'name'}</a>
+            <a>{"name"}</a>
           </Link>
         </>
       </>
