@@ -5,9 +5,10 @@ import AdminLayout from "../layouts/AdminLayout";
 import UserLayout from "../layouts/UserLayout";
 import theme from "../src/theme";
 import React from "react";
-
+import Router from "next/router";
 import { useRouter } from "next/router";
 import ScrollToTop from "@/components/ScrollToTop";
+import ProgressBar from "@badrap/bar-of-progress";
 function MyApp({ Component, pageProps }) {
   const data = {};
   let Layout;
@@ -19,9 +20,22 @@ function MyApp({ Component, pageProps }) {
   } else {
     Layout = UserLayout;
   }
+  
+  const progress = new ProgressBar({
+    size: 2,
+    color: "#bd1a30",
+    className: "bar-of-progress",
+    delay: 100,
+  });
+
+  Router.events.on("routeChangeStart", progress.start);
+  Router.events.on("routeChangeComplete", progress.finish);
+  Router.events.on("routeChangeError", progress.finish);
+
   return (
     <ChakraProvider theme={theme}>
       <MainContext.Provider value={data}>
+
         <Layout>
           <Component {...pageProps} />
         </Layout>

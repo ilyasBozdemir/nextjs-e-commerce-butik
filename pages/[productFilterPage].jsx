@@ -1,10 +1,7 @@
 import React from "react";
-import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 function ProductFilterPage() {
-  const router = useRouter();
-  const { slug, productDetail } = router.query;
   return (
     <>
       <Head>
@@ -13,7 +10,6 @@ function ProductFilterPage() {
       <>
         test link
         <>
-          {slug}-{productDetail}
           <>
             <Link
               href="/p/[slug]/[[productDetail]]"

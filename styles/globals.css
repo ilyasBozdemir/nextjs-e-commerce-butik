@@ -160,3 +160,6 @@ html[data-theme="light"] .slick-next:before {
 
 
 
+.bar-of-progress {
+  z-index: 50;
+}

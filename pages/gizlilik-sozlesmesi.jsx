@@ -4,7 +4,7 @@ function ConfidentialityAgreementPage() {
   return (
     <>
       <Head>
-        <title>Site Bakımda</title>
+        <title>Gizlilik Sözleşmesi</title>
       </Head>
       Gizlilik Sözleşmesi
     </>
