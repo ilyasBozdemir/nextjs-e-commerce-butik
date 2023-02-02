@@ -16,20 +16,29 @@ function MyApp({ Component, pageProps, statusCode }) {
   let Layout;
   const router = useRouter();
 
+  const statusCodes = [
+    400,//Kötü İstek
+    401,//Yetkisiz
+    403,//Yasak
+    404,//Sayfa Bulunamadı
+    500,//sunucu içi hata oluştu
+    503//sunucu cevap vermezse
+    ];
+
   if (router.pathname === "/") {
-    if ([401, 403, 404, 500].includes(statusCode)) {
+    if (statusCodes.includes(statusCode)) {
       Layout = ErrorLayout;
-    } else if (statusCode === 200) {
-      Layout = HomeLayout;
+    } else if (statusCode === 200/* */) {
+      Layout = UserLayout;
     }
   } else if (router.pathname.startsWith("/admin")) {
-    if ([401, 403, 404, 500].includes(statusCode)) {
+    if (statusCodes.includes(statusCode)) {
       Layout = ErrorLayout;
     } else if (statusCode === 200) {
       Layout = AdminLayout;
     }
   } else {
-    if ([401, 403, 404, 500].includes(statusCode)) {
+    if (statusCodes.includes(statusCode)) {
       Layout = ErrorLayout;
     } else if (statusCode === 200) {
       Layout = UserLayout;
