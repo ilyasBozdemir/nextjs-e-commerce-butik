@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import Logo from "../Logo";
 
@@ -9,8 +9,10 @@ function HeaderBody() {
         <>
           <Logo />
         </>
-        <Text>searchbox</Text>
-        <Text>vv</Text>
+        <Box>searchbox</Box>
+        <Box>
+
+        </Box>
       </Flex>
     </>
   );
