@@ -11,29 +11,28 @@ import { useRouter } from "next/router";
 import ScrollToTop from "@/components/ScrollToTop";
 import ProgressBar from "@badrap/bar-of-progress";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, statusCode }) {
   const data = {};
   let Layout;
   const router = useRouter();
-  const { statusCode } = router.query;
 
   if (router.pathname === "/") {
-    if (statusCode === 200) {
-      Layout = UserLayout;
-    } else {
+    if ([401, 403, 404, 500].includes(statusCode)) {
       Layout = ErrorLayout;
+    } else if (statusCode === 200) {
+      Layout = HomeLayout;
     }
   } else if (router.pathname.startsWith("/admin")) {
-    if (statusCode === 200) {
-      Layout = AdminLayout;
-    } else {
+    if ([401, 403, 404, 500].includes(statusCode)) {
       Layout = ErrorLayout;
+    } else if (statusCode === 200) {
+      Layout = AdminLayout;
     }
   } else {
-    if (statusCode === 200) {
-      Layout = UserLayout;
-    } else {
+    if ([401, 403, 404, 500].includes(statusCode)) {
       Layout = ErrorLayout;
+    } else if (statusCode === 200) {
+      Layout = UserLayout;
     }
   }
 
@@ -59,4 +58,12 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
+MyApp.getInitialProps = async ({ Component, ctx }) => {
+  let pageProps = {};
+  if (Component.getInitialProps) {
+    pageProps = await Component.getInitialProps(ctx);
+  }
+
+  return { pageProps, statusCode: ctx.res ? ctx.res.statusCode : null };
+};
 export default MyApp;
