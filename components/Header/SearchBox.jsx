@@ -21,7 +21,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
 import { Highlight } from "@chakra-ui/react";
 
-import { data } from "../../constants/categoryData";
+import { data } from "../../constants/categories";
 
 function SearchBox(props) {
  
