@@ -1,0 +1,5 @@
+User-agent: *
+User-agent: Googlebot
+
+# burda search parametlerini, sepet sayfasını indexlemesini engellemek lazım
+#
