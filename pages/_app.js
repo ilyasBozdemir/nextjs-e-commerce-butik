@@ -3,7 +3,7 @@ import { MainContext } from "@/contexts/MainContext";
 import { ChakraProvider } from "@chakra-ui/react";
 import AdminLayout from "../layouts/AdminLayout";
 import UserLayout from "../layouts/UserLayout";
-import ErrorLayout from '../layouts/ErrorLayout';
+import ErrorLayout from "../layouts/ErrorLayout";
 import theme from "../src/theme";
 import React from "react";
 import Router from "next/router";
@@ -11,24 +11,32 @@ import { useRouter } from "next/router";
 import ScrollToTop from "@/components/ScrollToTop";
 import ProgressBar from "@badrap/bar-of-progress";
 
-
-
-
 function MyApp({ Component, pageProps }) {
   const data = {};
   let Layout;
   const router = useRouter();
   const { statusCode } = router.query;
-  
 
   if (router.pathname === "/") {
-    Layout = UserLayout;
+    if (statusCode === 200) {
+      Layout = UserLayout;
+    } else {
+      Layout = ErrorLayout;
+    }
   } else if (router.pathname.startsWith("/admin")) {
-    Layout = AdminLayout;
+    if (statusCode === 200) {
+      Layout = AdminLayout;
+    } else {
+      Layout = ErrorLayout;
+    }
   } else {
-    Layout = UserLayout;
+    if (statusCode === 200) {
+      Layout = UserLayout;
+    } else {
+      Layout = ErrorLayout;
+    }
   }
-  
+
   const progress = new ProgressBar({
     size: 2,
     color: "#bd1a30",
@@ -43,7 +51,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
       <MainContext.Provider value={data}>
-
         <Layout>
           <Component {...pageProps} />
         </Layout>
