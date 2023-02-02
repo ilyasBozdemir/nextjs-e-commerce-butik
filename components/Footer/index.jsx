@@ -197,7 +197,7 @@ function Footer() {
                     required
                   />
 
-                  <Button color="blue.400" type="submit" flexShrink={0}>
+                  <Button color="black" type="submit" flexShrink={0}>
                     Abone ol
                   </Button>
                 </Stack>

@@ -6,6 +6,7 @@ import { Box, Flex, HStack } from "@chakra-ui/react";
 import Showcase from "@/components/Showcase";
 import IGStory from "@/components/IGStory";
 import Highlights from "@/components/Highlights";
+import Link from "next/link";
 
 export default function HomePage() {
   const router = useRouter();
@@ -84,7 +85,8 @@ export default function HomePage() {
           <Box as={'p'} h={50}>Öne Çıkanlar</Box>
           <Box as={'p'} h={50}>Çok Satan Ürünler</Box>
           <Box as={'p'} h={50}>Showcases</Box>
-
+         
+       
         </Box>
       </main>
     </>

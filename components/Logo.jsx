@@ -8,18 +8,18 @@ function Logo() {
   return (
     <>
       <>
-        <Box >
-          <Link  href='/' legacyBehavior>
-          <a>
-            <Text
-              bgGradient="linear(to-l, #7928CA, #FF0080)"
-              bgClip="text"
-              fontSize="3xl"
-              fontWeight="extrabold"
-              userSelect={'none'}
-            >
-              EflatunButik
-            </Text>
+        <Box>
+          <Link href="/" legacyBehavior>
+            <a>
+              <Text
+                bgGradient="linear(to-l, #7928CA, #FF0080)"
+                bgClip="text"
+                fontSize="3xl"
+                fontWeight="extrabold"
+                userSelect={"none"}
+              >
+                EflatunButik
+              </Text>
             </a>
           </Link>
         </Box>
