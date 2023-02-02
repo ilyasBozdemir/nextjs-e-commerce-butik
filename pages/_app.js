@@ -17,18 +17,21 @@ function MyApp({ Component, pageProps, statusCode }) {
   const router = useRouter();
 
   const statusCodes = [
-    400,//Kötü İstek
-    401,//Yetkisiz
-    403,//Yasak
-    404,//Sayfa Bulunamadı
-    500,//sunucu içi hata oluştu
-    503//sunucu cevap vermezse
-    ];
+    400, //Kötü İstek
+    401, //Yetkisiz
+    403, //Yasak
+    404, //Sayfa Bulunamadı
+    500, //sunucu içi hata oluştu
+    501, //sunucu desteklemiyor
+    502, //kötü ağ geçidi
+    503, //sunucu cevap vermezse
+    504 //sunucu başka sunucudan veriyi zamanında alamadı.
+  ];
 
   if (router.pathname === "/") {
     if (statusCodes.includes(statusCode)) {
       Layout = ErrorLayout;
-    } else if (statusCode === 200/* */) {
+    } else if (statusCode === 200 /* */) {
       Layout = UserLayout;
     }
   } else if (router.pathname.startsWith("/admin")) {
