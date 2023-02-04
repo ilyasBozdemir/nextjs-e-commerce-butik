@@ -4,7 +4,7 @@ function MobileHeader() {
   return (
     <>
       <Stack  w={"100%"}>
-        test
+        <>test</>
       </Stack>
     </>
   );

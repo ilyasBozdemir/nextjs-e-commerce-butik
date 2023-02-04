@@ -23,7 +23,7 @@ function BottomNavigation() {
     },
   ];
 
-  return <div>BottomNavigation</div>;
+  return <>BottomNavigation</>;
 }
 
 export default BottomNavigation;
