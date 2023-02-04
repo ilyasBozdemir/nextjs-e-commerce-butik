@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
 
 function HeaderBottom() {
-  return (
-    <div>HeaderBottom</div>
-  )
+  return <></>;
 }
 
-export default HeaderBottom
+export async function getStaticProps({ params }) {
+  return {
+    props: {},
+  };
+}
+
+export async function getStaticPaths() {
+
+
+  return {
+    fallback: false,
+  };
+}
+
+export default HeaderBottom;

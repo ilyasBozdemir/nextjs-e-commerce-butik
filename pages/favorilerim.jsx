@@ -2,7 +2,14 @@ import React from 'react'
 
 function MyFavoriteProductsPage() {
   return (
-    <div>favorilerim</div>
+    <>
+    filtre olarak;
+    tüm favorilerim,
+    yıldızlı ürünler,
+    fiyatı düşenler,
+    kuponlu ürünler;
+    
+    </>
   )
 }
 export default MyFavoriteProductsPage

@@ -11,7 +11,7 @@ function HeaderBody() {
         </>
         <Box>searchbox</Box>
         <Box>
-
+        hesabım ,favorilerim ,sepetim
         </Box>
       </Flex>
     </>

@@ -1,9 +1,13 @@
-import React from 'react'
-
+import React from "react";
+import { Stack } from "@chakra-ui/react";
 function MobileHeader() {
   return (
-    <div>MobileHeader</div>
-  )
+    <>
+      <Stack  w={"100%"}>
+        test
+      </Stack>
+    </>
+  );
 }
 
-export default MobileHeader
+export default MobileHeader;

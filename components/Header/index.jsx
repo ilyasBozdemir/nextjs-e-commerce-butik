@@ -20,14 +20,14 @@ function Header() {
         _light={{ bg: "white" }}
         _dark={{ bg: "blackAlpha.50" }}
       >
-        <Stack display={{ base: "none", md: "flex" }} w={"100%"}>
+        <Stack display={{ base: "none", md: "initial" }} w={"100%"}>
           <DesktopHeader />
         </Stack>
-        <Stack display={{ base: "flex", md: "none" }} width={"100%"}>
+        <Stack display={{ base: "initial", md: "none" }} width={"100%"}>
           <MobileHeader />
         </Stack>
       </Box>
-      <Stack display={{ base: "flex", md: "none" }} width={"100%"}>
+      <Stack display={{ base: "initial", md: "none" }} width={"100%"}>
         <BottomNavigation />
       </Stack>
     </>
