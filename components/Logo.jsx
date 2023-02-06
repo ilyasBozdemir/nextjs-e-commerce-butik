@@ -18,7 +18,7 @@ function Logo() {
                 fontWeight="extrabold"
                 userSelect={"none"}
               >
-                EflatunButik
+                eflatunbutik
               </Text>
             </a>
           </Link>
