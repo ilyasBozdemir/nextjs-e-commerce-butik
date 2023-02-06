@@ -19,17 +19,18 @@ function Navbar(props) {
           mx={1}
           py={[1, 2, 2]}
           px={4}
-          borderRadius={5}
           _hover={{
             borderBottom: "solid",
             borderBottomColor: "#7928CA",
             color: "#7928CA",
           }}
           aria-label={{ label } + " button"}
-          fontWeight="normal"
+          fontWeight="400"
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
-          onClick={() => navigate(href)}
+          onClick={() => {}}
+          textTransform="uppercase"
+
         >
           {label}
         </MenuButton>
@@ -45,12 +46,10 @@ function Navbar(props) {
                       // eslint-disable-next-line react-hooks/rules-of-hooks
                       bg: useColorModeValue("gray.100", "gray.700"),
                       color: "#fff",
-                      bgGradient: "linear(to-l, #7928CA, #FF0080)",
                     }}
+                    userSelect={"none"}
                   >
-                    <Text as={"span"} userSelect={"none"}>
-                      {link.label}
-                    </Text>
+                    <Text as={"span"}>{link.label}</Text>
                   </MenuItem>
                 </a>
               </Link>
