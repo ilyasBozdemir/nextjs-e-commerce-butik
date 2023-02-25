@@ -12,6 +12,7 @@ import {
 function Navbar(props) {
   const { label, href, icon, childrens } = props.link;
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <Menu isOpen={isOpen} pos={"relative"}>
@@ -19,20 +20,26 @@ function Navbar(props) {
           mx={1}
           py={[1, 2, 2]}
           px={4}
-          _hover={{
-            borderBottom: "solid",
-            borderBottomColor: "#7928CA",
-            color: "#7928CA",
-          }}
           aria-label={{ label } + " button"}
           fontWeight="400"
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
-          onClick={() => {}}
+          onClick={() => { }}
           textTransform="uppercase"
+          className={'nav-item'}
 
         >
-          {label}
+          <Text sx={{
+            '.nav-item:hover &': {
+              borderBottom: "solid",
+              borderBottomColor: "#7928CA",
+              color: "#7928CA",
+            },
+          }}>
+            {label}
+          </Text>
+
+
         </MenuButton>
         {childrens.length !== 0 ? (
           <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>

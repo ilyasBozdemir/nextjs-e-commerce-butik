@@ -28,7 +28,9 @@ function SearchBox(props) {
   return (
     <>
       <form autocomplete="off">
+        <>
         
+        </>
       </form>
     </>
   );
