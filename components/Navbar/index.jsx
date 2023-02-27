@@ -54,7 +54,7 @@ function Navbar(props) {
                       bg: useColorModeValue("gray.100", "gray.700"),
                       color: "#fff",
                     }}
-                    userSelect={"none"}
+                    userSelect={"none"}pr
                   >
                     <Text as={"span"}>{link.label}</Text>
                   </MenuItem>
