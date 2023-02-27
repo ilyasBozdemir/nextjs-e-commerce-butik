@@ -32,7 +32,6 @@ function UserLayout({ children }) {
         <Box>
           <ScrollToTop />
           {/* <CookieContainer />*/}
-
           {children}
           <Footer />
         </Box>

@@ -7,7 +7,7 @@ import HeaderTop from "./HeaderTop";
 function DesktopHeader() {
   return (
     <>
-      <Stack  w={"100%"}>
+      <Stack w={"100%"}>
         <HeaderTop />
         <HeaderBody />
         <HeaderBottom />
