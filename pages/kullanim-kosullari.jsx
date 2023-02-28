@@ -4,11 +4,13 @@ import React from 'react'
 function TermsOfUsePage() {
   return (
     <>
-    <Head>
-      <title>Kullanım Koşulları</title>
-    </Head>
-    Kullanım Koşulları
-  </>
+      <Head>
+        <title>Kullanım Koşulları &#x2022; [siteName] | [desc]</title>
+      </Head>
+      Kullanım Koşulları
+    </>
+
+
   )
 }
-export default TermsOfUsePage
+export default TermsOfUsePage 

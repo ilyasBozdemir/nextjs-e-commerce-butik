@@ -5,7 +5,7 @@ function MembershipAgreementPage() {
   return (
     <>
       <Head>
-        <title>Üyelik Sözleşmesi</title>
+        <title>Üyelik Sözleşmesi &#x2022; [siteName] | [desc]</title>
       </Head>
       <>
       

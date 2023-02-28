@@ -5,7 +5,7 @@ function MyBasketPage() {
   return (
     <>
       <Head>
-        <title>Sepetim</title>
+        <title>Sepetim &#x2022; [siteName] | [desc]</title>
       </Head>
       <>
       </>

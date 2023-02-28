@@ -1,7 +1,7 @@
 import { Icon, Button, Box } from "@chakra-ui/react";
 import { BsChevronUp } from "react-icons/bs";
 
-import React, { useState, useLayoutEffect, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const scrollToTop = () => {
   window.scroll({
@@ -13,7 +13,7 @@ const scrollToTop = () => {
 function useWindowPosition() {
   const [scrollPosition, setPosition] = useState(0);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     function updatePosition() {
       setPosition(window.pageYOffset);
     }

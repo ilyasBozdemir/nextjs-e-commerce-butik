@@ -6,7 +6,11 @@ function AdminPage() {
     <>
       <Head>
         <meta name="robots" content="noindex" />
+        <title>Kontrol Paneli</title>
       </Head>
+      <>
+      
+      </>
     </>
   );
 }

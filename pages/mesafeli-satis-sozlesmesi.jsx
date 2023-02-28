@@ -6,7 +6,7 @@ function DistanceSellingContractPage() {
   return (
     <>
     <Head>
-    <title>Mesafeli Satış Sözleşmesi</title>
+    <title>Mesafeli Satış Sözleşmesi &#x2022; [siteName] | [desc]</title>
     </Head>
       <div>
         <h1 id="mesafeli-sat-s-zle-mesi">Mesafeli Satış Sözleşmesi</h1>
