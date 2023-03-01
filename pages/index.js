@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function HomePage() {
   const router = useRouter();
   const [currentUrl, setCurrentUrl] = React.useState(router.asPath);
- 
+
   const [site, setSite] = React.useState({
     author: "ilyas Bozdemir,bozdemir.ib70@gmail.com",
     title: "Eflatun Butik",
@@ -56,13 +56,13 @@ export default function HomePage() {
       </Head>
       <Stack as='main' w={"full"} p={2}>
 
-        <Box as={'p'} h={50}>IGStory</Box>
-        <Box as={'p'} h={50}>Highlights</Box>
-        <Box as={'p'} h={50}>Öne Çıkanlar</Box>
-        <Box as={'p'} h={50}>Çok Satan Ürünler</Box>
-        <Box as={'p'} h={50}>Showcases</Box>
-
+        <Box as={'p'} >IGStory</Box>
+        <Box as={'p'} >Highlights</Box>
+        <Box as={'p'} >Öne Çıkanlar</Box>
+        <Box as={'p'} >Çok Satan Ürünler</Box>
+        <Box as={'p'} >Showcases</Box>
       </Stack>
+
     </>
   );
 }

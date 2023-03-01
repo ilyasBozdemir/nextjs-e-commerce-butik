@@ -2,8 +2,8 @@ import { Box, Flex, Spacer, useDisclosure } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
 
-import SettingSidebar from "../SettingSidebar";
-import SettingSidebarButton from "../SettingSidebar/SettingSidebarButton";
+import SettingSidebar from "../../SettingSidebar";
+import SettingSidebarButton from "../../SettingSidebar/SettingSidebarButton";
 
 
 function HeaderTop() {

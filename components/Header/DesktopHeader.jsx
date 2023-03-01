@@ -1,8 +1,8 @@
 import { Stack } from "@chakra-ui/react";
 import React from "react";
-import HeaderBody from "./HeaderBody";
-import HeaderBottom from "./HeaderBottom";
-import HeaderTop from "./HeaderTop";
+import HeaderBody from "./Sections/HeaderBody";
+import HeaderBottom from "./Sections/HeaderBottom";
+import HeaderTop from "./Sections/HeaderTop";
 
 function DesktopHeader() {
   return (

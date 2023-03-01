@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../Navbar";
+import Navbar from "../../Navbar";
 import { Flex } from "@chakra-ui/react";
 
-import { linkItems } from "../../constants/linkItems";
+import { linkItems } from "../../../constants/linkItems";
 function HeaderBottom() {
   return (
     <>
